@@ -1,4 +1,17 @@
 package datastructures;
+
+/**
+ * Date 12/30/2021
+ *
+ * @author Himanshu Rajvanshi
+ * Queue is the data structure that is similar to the queue in the real world.
+ * A queue is a data structure in which whatever comes first will go out first, and it follows the FIFO (First-In-First-Out) policy.
+ * an insertion takes place from one end while the deletion occurs from another end.
+ * The end at which the insertion takes place is known as the rear end, and the end at which the deletion takes place is known as front end.
+ * <p>
+ * Here we will be implementing queue using linked list, so prior knowledge of  linked list is required.
+ *
+ */
 public class Queue {
     static Queue first, last;
     Integer size;
@@ -14,6 +27,9 @@ public class Queue {
         this.data = data;
     }
 
+    /*
+    method to add any specific element into the queue
+     */
     public void add(Integer number) {
         if (first == null) {
             first = new Queue(number);
@@ -26,7 +42,7 @@ public class Queue {
         this.size++;
     }
 
-    public  Integer poll() {
+    public Integer poll() {
         try {
             Integer val = first.data;
             first = first.next;
@@ -47,7 +63,7 @@ public class Queue {
         return null;
     }
 
-    public  Integer size() {
+    public Integer size() {
         return this.size;
     }
 
