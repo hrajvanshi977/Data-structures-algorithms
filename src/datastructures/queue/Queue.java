@@ -1,4 +1,4 @@
-package datastructures;
+package datastructures.queue;
 
 /**
  * Date 12/30/2021
